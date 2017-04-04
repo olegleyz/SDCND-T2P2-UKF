@@ -1,0 +1,3 @@
+/Users/leyzerov/term2/p2/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/leyzerov/term2/p2/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/leyzerov/term2/p2/src/cmake-build-debug/CMakeFiles/src.dir
