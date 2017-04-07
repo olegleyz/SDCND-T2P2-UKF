@@ -24,47 +24,50 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="src" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+      <file leaf-file-name="tracking.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracking.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="180">
+              <caret line="98" column="4" lean-forward="false" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="4" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <marker date="1491581870000" expanded="true" signature="2174:3735" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ukf.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ukf.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ukf.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3270">
-              <caret line="218" column="40" lean-forward="false" selection-start-line="218" selection-start-column="40" selection-end-line="218" selection-end-column="40" />
+            <state relative-caret-position="-2281">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
-                <element signature="e#50#69#0" expanded="true" />
+                <element signature="e#5380#5711#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Block.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Eigen/src/Core/Block.h">
+      <file leaf-file-name="tracking.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tracking.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -73,8 +76,8 @@
       <file leaf-file-name="ukf.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ukf.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            <state relative-caret-position="161">
+              <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -82,13 +85,26 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>1</find>
+      <find>KalmanFilter kf_</find>
+      <find>cout</find>
+      <find>&lt; eps</find>
+    </findStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Eigen/src/Core/Assign.h" />
+        <option value="$PROJECT_DIR$/measurement_package.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/tracking.h" />
         <option value="$PROJECT_DIR$/ukf.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Eigen/src/Core/Block.h" />
         <option value="$PROJECT_DIR$/ukf.cpp" />
+        <option value="$PROJECT_DIR$/tracking.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -138,8 +154,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.src">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Build All">
     <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="src" TARGET_NAME="src" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
@@ -187,12 +216,6 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -278,7 +301,7 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
+      <option name="PUREUNITTEST" value="false" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
       <method />
@@ -307,17 +330,17 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../../data/sample-laser-radar-measurement-data-2.txt ../../data/sample-laser-radar-measurement-data-2-out.txt " WORKING_DIR="" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="src" RUN_TARGET_NAME="src" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="src" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="src" TARGET_NAME="src" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="src" RUN_TARGET_NAME="src">
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="src" RUN_TARGET_NAME="src" EXPLICIT_BUILD_TARGET_NAME="all">
-      <envs />
-      <method />
-    </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.src" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.src" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -332,34 +355,43 @@
       <updated>1491304316204</updated>
       <workItem from="1491304318074" duration="4655000" />
       <workItem from="1491316948418" duration="11161000" />
+      <workItem from="1491381095276" duration="3982000" />
+      <workItem from="1491397483527" duration="7712000" />
+      <workItem from="1491406363276" duration="1091000" />
+      <workItem from="1491407503525" duration="2000" />
+      <workItem from="1491407509637" duration="3943000" />
+      <workItem from="1491465357168" duration="23511000" />
+      <workItem from="1491508651957" duration="25431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15816000" />
+    <option name="totallyTimeSpent" value="81488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1279" height="708" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24941361" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24941361" sideWeight="0.48870057" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32394367" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43192488" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24941361" sideWeight="0.51129943" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4460094" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,25 +401,127 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ukf.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4155">
+          <caret line="277" column="6" lean-forward="false" selection-start-line="277" selection-start-column="6" selection-end-line="277" selection-end-column="6" />
+          <folding>
+            <element signature="e#5380#5711#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ukf.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        <state relative-caret-position="465">
+          <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main__.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="94" column="5" lean-forward="true" selection-start-line="72" selection-start-column="4" selection-end-line="94" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracking.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1491581870000" expanded="true" signature="2174:3735" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracking.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ukf.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4155">
+          <caret line="277" column="6" lean-forward="false" selection-start-line="277" selection-start-column="6" selection-end-line="277" selection-end-column="6" />
+          <folding>
+            <element signature="e#5380#5711#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ukf.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main__.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="95" column="23" lean-forward="true" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracking.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <marker date="1491581870000" expanded="true" signature="2174:3735" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracking.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -396,23 +530,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#50#69#0" expanded="true" />
+            <element signature="e#5380#5711#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/CwiseBinaryOp.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ukf.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        <state relative-caret-position="270">
+          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -421,30 +547,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/Assign.h">
+    <entry file="file://$PROJECT_DIR$/ukf.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="504" column="0" lean-forward="false" selection-start-line="504" selection-start-column="0" selection-end-line="504" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+          <folding>
+            <element signature="e#5380#5711#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/CwiseBinaryOp.h">
+    <entry file="file://$PROJECT_DIR$/ukf.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/math.h">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="702" column="12" lean-forward="true" selection-start-line="702" selection-start-column="8" selection-end-line="702" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ukf.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+          <folding>
+            <element signature="e#5380#5711#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ukf.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ukf.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#5380#5711#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/Block.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -456,31 +649,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/Block.h">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ukf.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3270">
-          <caret line="218" column="40" lean-forward="false" selection-start-line="218" selection-start-column="40" selection-end-line="218" selection-end-column="40" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#50#69#0" expanded="true" />
+            <element signature="e#5380#5711#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/CwiseBinaryOp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ukf.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/Assign.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="504" column="0" lean-forward="false" selection-start-line="504" selection-start-column="0" selection-end-line="504" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/math.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="702" column="12" lean-forward="true" selection-start-line="702" selection-start-column="8" selection-end-line="702" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/DenseBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="272" column="38" lean-forward="false" selection-start-line="272" selection-start-column="38" selection-end-line="272" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main 2.cpp" />
+    <entry file="file://$PROJECT_DIR$/measurement_package.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/DenseCoeffsBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="335" column="0" lean-forward="false" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/SelfCwiseBinaryOp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="86" lean-forward="false" selection-start-line="5" selection-start-column="86" selection-end-line="5" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracking.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/CommaInitializer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ukf.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/Block.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="87" column="28" lean-forward="false" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eigen/src/Core/CwiseBinaryOp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main__.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="85" column="13" lean-forward="false" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ukf.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2281">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#5380#5711#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tracking.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="98" column="4" lean-forward="false" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="4" />
+          <folding>
+            <marker date="1491581870000" expanded="true" signature="2174:3735" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

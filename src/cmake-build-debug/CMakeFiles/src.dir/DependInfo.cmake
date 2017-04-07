@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/leyzerov/term2/p2/src/main.cpp" "/Users/leyzerov/term2/p2/src/cmake-build-debug/CMakeFiles/src.dir/main.cpp.o"
+  "/Users/leyzerov/term2/p2/src/tracking.cpp" "/Users/leyzerov/term2/p2/src/cmake-build-debug/CMakeFiles/src.dir/tracking.cpp.o"
   "/Users/leyzerov/term2/p2/src/ukf.cpp" "/Users/leyzerov/term2/p2/src/cmake-build-debug/CMakeFiles/src.dir/ukf.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
