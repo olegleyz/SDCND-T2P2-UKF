@@ -49,6 +49,8 @@ public:
 
     MatrixXd Xsig_pred_; //
     void Prediction(double delta_t);
+    double NIS_laser_;
+    double NIS_radar_;
 
 private:
 };

@@ -81,12 +81,14 @@ void UKF::PredictMeanAndCovariance() {
     for (int i = 0; i < n_sigma_; i++) {
         x += weights_(i) * Xsig_pred_.col(i);
     }
+
     MatrixXd P = MatrixXd::Zero(n_x_, n_x_); // predicted process covariance matrix
     for (int i = 0; i < n_sigma_; i++) {
         VectorXd dif = Xsig_pred_.col(i) - x;
         dif(3) = UKF::NormalizeAngle(dif(3));
 
         P = P + weights_(i) * dif * dif.transpose();
+
     }
     x_ = x; // update state vector
     P_ = P; // update covariance matrix
@@ -97,8 +99,6 @@ void UKF::Predict(double delta_t) {
 }
 
 void UKF::PredictMeasurement(const VectorXd &z, int sensor_type) {
-
-
     if (sensor_type == 0) {
         double radr, radphi, radrd;
         MatrixXd Zsig;
@@ -109,21 +109,17 @@ void UKF::PredictMeasurement(const VectorXd &z, int sensor_type) {
         z_pred = VectorXd::Zero(z_radar_); // mean predicted measurement
         S = MatrixXd::Zero(z_radar_, z_radar_); // measurement covariance matrix
 
-
         for (int i = 0; i < n_sigma_; i++) {
             VectorXd x = Xsig_pred_.col(i);
             // check for nonsense data
-
-            if (sensor_type == 0) {
-                if (fabs(x[0]) < epsilon_ && fabs(x[1]) < epsilon_) { //if px and py ~ 0
-                    x[0] = epsilon_;
-                    x[1] = epsilon_;
-                } else if (fabs(x[0]) < epsilon_) x[0] = epsilon_; // if px ~ 0
-                radr = sqrt(x[0] * x[0] + x[1] * x[1]);
-                radphi = atan2(x[1], x[0]);
-                radrd = (x[0] * cos(x[3]) * x[2] + x[1] * sin(x[3]) * x[2]) / radr;
-                Zsig.col(i) << radr, radphi, radrd;
-            }
+            if (fabs(x[0]) < epsilon_ && fabs(x[1]) < epsilon_) { //if px and py ~ 0
+                x[0] = epsilon_;
+                x[1] = epsilon_;
+            } else if (fabs(x[0]) < epsilon_) x[0] = epsilon_; // if px ~ 0
+            radr = sqrt(x[0] * x[0] + x[1] * x[1]);
+            radphi = atan2(x[1], x[0]);
+            radrd = (x[0] * cos(x[3]) * x[2] + x[1] * sin(x[3]) * x[2]) / radr;
+            Zsig.col(i) << radr, radphi, radrd;
         }
 
         for (int i = 0; i < n_sigma_; i++) {
@@ -136,7 +132,9 @@ void UKF::PredictMeasurement(const VectorXd &z, int sensor_type) {
             S += weights_(i) * dif * dif.transpose();
         }
         S += R_radar_;
-
+        VectorXd dif = z - z_pred;
+        dif(1) = NormalizeAngle(dif(1));
+        NIS_radar_ = dif.transpose() * S.inverse() * dif;
         UKF::UpdateState(Zsig, z_pred, S, z, sensor_type);
 
     } else if (sensor_type==1) {
@@ -153,6 +151,9 @@ void UKF::PredictMeasurement(const VectorXd &z, int sensor_type) {
         long x_size = x_.size();
         MatrixXd I_ = MatrixXd::Identity(x_size, x_size);
         P_ = (I_ - K * H_) * P_;
+        // NIS
+        VectorXd dif = z - z_pred;
+        NIS_laser_ = dif.transpose() * S.inverse() * dif;
     }
 
 }
@@ -187,6 +188,7 @@ void UKF::UpdateState(MatrixXd &Zsig, VectorXd &z_pred, MatrixXd &S, const Vecto
     }
     x_ += K * dif_z; // state update
     P_ -= K * S * K.transpose(); // process covariance update
+
  }
 
 void UKF::UpdateRadar(const VectorXd &z) {

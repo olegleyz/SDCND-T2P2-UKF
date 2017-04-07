@@ -5,7 +5,6 @@
 #include <iostream>
 #include "tracking.h"
 #include "Eigen/Dense"
-//#include "ukf.h"
 
 
 using namespace std;
@@ -13,6 +12,8 @@ using Eigen::VectorXd;
 using Eigen::MatrixXd;
 
 Tracking::Tracking(){
+    use_radar_ = true; // true if we should use measurement from RADAR
+    use_laser_ = true; // true if we should use measurement from LIDAR
     is_initialized_ = false;
     previous_timestamp_ = 0;
     ukf_.epsilon_ = 0.001;
@@ -28,12 +29,12 @@ Tracking::Tracking(){
         ukf_.weights_(i) = weight;
     }
     ukf_.std_a_ = 3; // 3 m/s^2
-    ukf_.std_yawdd_ = 0.9; //M_PI / 4; // 3.14/2 rad
+    ukf_.std_yawdd_ = 0.4; // 0.9 rad
     ukf_.std_lpx_ = 0.15;
     ukf_.std_lpy_ = 0.15;
     ukf_.std_rro_ = 0.3;
-    ukf_.std_rphi_ = 0.03;//0.0175;//0.03;
-    ukf_.std_rrod_ = 0.3;//0.1;//0.3;
+    ukf_.std_rphi_ = 0.03;
+    ukf_.std_rrod_ = 0.3;
     ukf_.z_lidar_ = 2;
     ukf_.R_lidar_ = MatrixXd::Zero(2,2);
     ukf_.R_lidar_(0, 0) = ukf_.std_lpx_ * ukf_.std_lpx_;
@@ -65,6 +66,8 @@ Tracking::Tracking(){
 Tracking::~Tracking(){}
 
 void Tracking::ProcessMeasurement(const MeasurementPackage &measurement_pack, const VectorXd &ground_truth) {
+    if (use_laser_ == false && measurement_pack.sensor_type_ == MeasurementPackage::LASER) return;
+    if (use_radar_ == false && measurement_pack.sensor_type_ == MeasurementPackage::RADAR) return;
     if (!is_initialized_) {
 
         if (measurement_pack.sensor_type_ == MeasurementPackage::LASER) {
@@ -84,7 +87,6 @@ void Tracking::ProcessMeasurement(const MeasurementPackage &measurement_pack, co
                 py = ukf_.epsilon_;
             }
             ukf_.x_ << px, py, v, yaw, 0;
-            //std::cout << "Initial x = " << std::endl << ukf_.x_ << std::endl;
         }
 
         previous_timestamp_ = measurement_pack.timestamp_;
@@ -94,13 +96,9 @@ void Tracking::ProcessMeasurement(const MeasurementPackage &measurement_pack, co
     float dt = (measurement_pack.timestamp_ - previous_timestamp_) / 1000000.0;
 
     previous_timestamp_ = measurement_pack.timestamp_;
-    //cout << ukf_.Xsig_pred_ << endl;
 
-    while (dt>0.1) {ukf_.Predict(0.05); dt -= 0.05;}
-        ukf_.Predict(dt);
-
-
-
+    while (dt>0.1) {ukf_.Predict(0.01); dt -= 0.01;}
+    ukf_.Predict(dt);
 
     if (measurement_pack.sensor_type_ == MeasurementPackage::RADAR) {
         ukf_.UpdateRadar(measurement_pack.raw_measurements_);
@@ -120,8 +118,8 @@ void Tracking::ProcessMeasurement(const MeasurementPackage &measurement_pack, co
     residual = residual.array() * residual.array();
     RMSE += residual;
 
-   // std::cout << "x_= " << ukf_.x_ << std::endl;
-   // std::cout << "P_= " << ukf_.P_ << std::endl;
+    //std::cout << "x_= " << ukf_.x_ << std::endl;
+    //std::cout << "P_= " << ukf_.P_ << std::endl;
 
 }
 

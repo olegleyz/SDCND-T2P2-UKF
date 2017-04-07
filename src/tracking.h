@@ -14,6 +14,9 @@ using Eigen::VectorXd;
 class Tracking {
 public:
     Tracking();
+    bool use_laser_;
+    bool use_radar_;
+
     virtual ~Tracking();
     void ProcessMeasurement(const MeasurementPackage &measurement_pack, const VectorXd &ground_truth);
     VectorXd getRMSE();
