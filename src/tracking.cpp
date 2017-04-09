@@ -28,8 +28,8 @@ Tracking::Tracking(){
     for (int i = 2 * ukf_.n_aug_; i>0; i--) {
         ukf_.weights_(i) = weight;
     }
-    ukf_.std_a_ = 3; // 3 m/s^2
-    ukf_.std_yawdd_ = 0.4; // 0.9 rad
+    ukf_.std_a_ = 1.5; // 3 m/s^2
+    ukf_.std_yawdd_ = 0.6; // 0.9 rad
     ukf_.std_lpx_ = 0.15;
     ukf_.std_lpy_ = 0.15;
     ukf_.std_rro_ = 0.3;
@@ -97,7 +97,7 @@ void Tracking::ProcessMeasurement(const MeasurementPackage &measurement_pack, co
 
     previous_timestamp_ = measurement_pack.timestamp_;
 
-    while (dt>0.1) {ukf_.Predict(0.01); dt -= 0.01;}
+    //while (dt>0.1) {ukf_.Predict(0.01); dt -= 0.01;}
     ukf_.Predict(dt);
 
     if (measurement_pack.sensor_type_ == MeasurementPackage::RADAR) {

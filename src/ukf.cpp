@@ -32,6 +32,9 @@ MatrixXd UKF::AugmentedSigmaPoints() {
     for (int i = n_aug_; i >0 ; i--) {
         Xsig_aug.col(i) = x_aug_ + lA.col(i - 1);
         Xsig_aug.col(i + n_aug_) = x_aug_ - lA.col(i - 1);
+        // Normalize yaw angle
+        Xsig_aug.col(i)(3) = NormalizeAngle(Xsig_aug.col(i)(3));
+        Xsig_aug.col(i + n_aug_)(3) = NormalizeAngle(Xsig_aug.col(i + n_aug_)(3));
     }
     return Xsig_aug;
 
@@ -72,6 +75,7 @@ void UKF::SigmaPointPrediction(double delta_t) {
         noise << pxn, pyn, dtna, pyawn, dtny;
 
         Xsig_pred.col(i) = x.head(n_x_) + xdot + noise; // Matrix of predicted Sigma Points
+        Xsig_pred.col(i)(3) = NormalizeAngle(Xsig_pred.col(i)(3));
     }
     Xsig_pred_ = Xsig_pred;
 }
@@ -81,6 +85,7 @@ void UKF::PredictMeanAndCovariance() {
     for (int i = 0; i < n_sigma_; i++) {
         x += weights_(i) * Xsig_pred_.col(i);
     }
+    x(3) = NormalizeAngle(x(3));
 
     MatrixXd P = MatrixXd::Zero(n_x_, n_x_); // predicted process covariance matrix
     for (int i = 0; i < n_sigma_; i++) {
@@ -92,6 +97,9 @@ void UKF::PredictMeanAndCovariance() {
     }
     x_ = x; // update state vector
     P_ = P; // update covariance matrix
+
+//    cout << "x predicted" << endl << x_ << endl;
+//    cout << "P predicted" << endl << P_ << endl;
 }
 void UKF::Predict(double delta_t) {
     UKF::SigmaPointPrediction(delta_t); // Generating and Predicting Sigma Points, dim (5, 15)
@@ -125,6 +133,7 @@ void UKF::PredictMeasurement(const VectorXd &z, int sensor_type) {
         for (int i = 0; i < n_sigma_; i++) {
             z_pred += weights_(i) * Zsig.col(i);
         }
+        z_pred(1) = NormalizeAngle(z_pred(1));
 
         for (int i = 0; i < n_sigma_; i++) {
             VectorXd dif = Zsig.col(i) - z_pred;
@@ -148,6 +157,9 @@ void UKF::PredictMeasurement(const VectorXd &z, int sensor_type) {
         MatrixXd S = H_ * P_ * Ht + R_lidar_;
         MatrixXd K = P_ * Ht * S.inverse();
         x_ = x_ + K * y;
+
+        x_(3) = NormalizeAngle(x_(3));
+
         long x_size = x_.size();
         MatrixXd I_ = MatrixXd::Identity(x_size, x_size);
         P_ = (I_ - K * H_) * P_;
@@ -187,6 +199,7 @@ void UKF::UpdateState(MatrixXd &Zsig, VectorXd &z_pred, MatrixXd &S, const Vecto
         dif_z(1) = UKF::NormalizeAngle(dif_z(1));
     }
     x_ += K * dif_z; // state update
+    x_(3) = NormalizeAngle(x_(3));
     P_ -= K * S * K.transpose(); // process covariance update
 
  }
